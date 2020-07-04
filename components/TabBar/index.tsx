@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { Container, IconContainer, IconText } from './styles';
 
@@ -23,9 +22,7 @@ const TabBar: React.FC<BottomTabBarProps> = ({
         const label =
           options.tabBarLabel !== undefined
             ? options.tabBarLabel
-            : options.title !== undefined
-            ? options.title
-            : route.name;
+            : options.title || route.name;
 
         const isFocused = state.index === index;
 

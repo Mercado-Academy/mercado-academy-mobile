@@ -9,6 +9,7 @@ import TabTwoScreen from '../screens/TabTwoScreen';
 import { BottomTabParamList, HomeParamList, TabTwoParamList } from '../types';
 import HomeScreen from '../screens/HomeScreen';
 import TabBar from '../components/TabBar';
+import TrackComplete from '../screens/TrackComplete';
 
 interface TabBarIconProps {
   size: number;
@@ -37,17 +38,17 @@ function HomeTabNavigator() {
 
 const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
-function TabTwoNavigator() {
-  return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
-      />
-    </TabTwoStack.Navigator>
-  );
-}
+// function HomeTabNavigator() {
+//   return (
+//     <TabTwoStack.Navigator>
+//       <TabTwoStack.Screen
+//         name="TabTwoScreen"
+//         component={TabTwoScreen}
+//         options={{ headerTitle: 'Tab Two Title' }}
+//       />
+//     </TabTwoStack.Navigator>
+//   );
+// }
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 const BottomTabNavigator: React.FC = () => {
@@ -73,7 +74,7 @@ const BottomTabNavigator: React.FC = () => {
       />
       <BottomTab.Screen
         name="Cursos"
-        component={TabTwoNavigator}
+        component={HomeTabNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
             <TabBarIconProps
@@ -86,7 +87,7 @@ const BottomTabNavigator: React.FC = () => {
       />
       <BottomTab.Screen
         name="Agenda"
-        component={TabTwoNavigator}
+        component={TrackComplete}
         options={{
           tabBarIcon: ({ color, size }) => (
             <TabBarIconProps name="calendar-today" color={color} size={size} />
@@ -95,7 +96,7 @@ const BottomTabNavigator: React.FC = () => {
       />
       <BottomTab.Screen
         name="Perfil"
-        component={TabTwoNavigator}
+        component={HomeTabNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
             <TabBarIconProps name="account" color={color} size={size} />
