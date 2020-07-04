@@ -1,7 +1,11 @@
 import * as React from 'react';
-
 import { Text, TextProps } from './Themed';
+import Fonts from '../constants/Fonts';
 
-export function MonoText(props: TextProps) {
-  return <Text {...props} style={[props.style, { fontFamily: 'space-mono' }]} />;
-}
+const StyledText: React.FC<TextProps> = ({ style, ...props }) => {
+  return (
+    <Text {...props} style={[{ fontFamily: Fonts.montserratRegular }, style]} />
+  );
+};
+
+export default StyledText;
