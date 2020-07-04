@@ -7,7 +7,7 @@ import StyledText from '../StyledText';
 const ProfileName: React.FC = () => {
   return (
     <Container>
-      <Avatar.Icon accessibilityStates icon="folder" />
+      <Avatar.Icon accessibilityStates icon="account" />
       <StyledText style={{ color: '#fff', marginLeft: 5 }}>
         Olá Zé do ML!
       </StyledText>
