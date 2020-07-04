@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import Fonts from '../../constants/Fonts';
-import Colors from '../../constants/Colors';
 
 export const Container = styled.View`
   flex: 1;
@@ -14,7 +13,7 @@ export const SearchContainer = styled.View`
 
 export const TitleText = styled.Text`
   font-family: ${Fonts.montserratBold};
-  font-size: ${Fonts.size.subtilte}px;
+  font-size: ${Fonts.size.subtitle}px;
   margin-bottom: 10px;
   margin-left: 5px;
   color: #fff;
@@ -22,7 +21,7 @@ export const TitleText = styled.Text`
 
 export const SectionTitle = styled.Text`
   font-family: ${Fonts.montserratBold};
-  font-size: ${Fonts.size.subtilte}px;
+  font-size: ${Fonts.size.subtitle}px;
   color: #000;
   margin-bottom: 5px;
   padding: 0 20px;

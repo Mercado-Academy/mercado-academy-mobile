@@ -1,16 +1,14 @@
 /* eslint-disable no-use-before-define */
-import React, { useState } from 'react';
+import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 
-import { Searchbar } from 'react-native-paper';
-import ProfileName from '../../components/ProfileName';
 import UpperTextBox from '../../components/UpperTextBox';
-import Fonts from '../../constants/Fonts';
 import SearchBar from '../../components/HomeSearchBar';
 
-import StyledText from '../../components/StyledText';
 import CourseImagePreview from '../../components/CourseImagePreview';
 import { Container, SearchContainer, TitleText, SectionTitle } from './styles';
+import PlatformCard from '../../components/PlatformCard';
+import CoursePreview from '../../components/CoursePreview';
 
 const HomeScreen: React.FC = () => {
   return (
@@ -27,13 +25,13 @@ const HomeScreen: React.FC = () => {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.scrollViewContainer}
         >
-          <View style={{ marginRight: 10 }}>
+          <View style={styles.item}>
             <CourseImagePreview />
           </View>
-          <View style={{ marginRight: 10 }}>
+          <View style={styles.item}>
             <CourseImagePreview />
           </View>
-          <View style={{ marginRight: 10 }}>
+          <View style={styles.item}>
             <CourseImagePreview />
           </View>
         </ScrollView>
@@ -45,16 +43,33 @@ const HomeScreen: React.FC = () => {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.scrollViewContainer}
         >
-          <View style={{ marginRight: 10 }}>
-            <CourseImagePreview />
+          <View style={styles.item}>
+            <PlatformCard />
           </View>
-          <View style={{ marginRight: 10 }}>
-            <CourseImagePreview />
+          <View style={styles.item}>
+            <PlatformCard />
           </View>
-          <View style={{ marginRight: 10 }}>
-            <CourseImagePreview />
+          <View style={styles.item}>
+            <PlatformCard />
           </View>
         </ScrollView>
+
+        <SectionTitle>Cursos mais populares da semana</SectionTitle>
+
+        <View style={{ flex: 1, padding: 10 }}>
+          <View style={styles.verticalItem}>
+            <CoursePreview />
+          </View>
+          <View style={styles.verticalItem}>
+            <CoursePreview />
+          </View>
+          <View style={styles.verticalItem}>
+            <CoursePreview />
+          </View>
+          <View style={styles.verticalItem}>
+            <CoursePreview />
+          </View>
+        </View>
       </ScrollView>
     </Container>
   );
@@ -64,6 +79,14 @@ const styles = StyleSheet.create({
   scrollViewContainer: {
     paddingHorizontal: 20,
     marginVertical: 10,
+  },
+
+  item: {
+    marginRight: 10,
+  },
+
+  verticalItem: {
+    marginBottom: 10,
   },
 });
 

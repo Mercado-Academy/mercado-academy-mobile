@@ -3,10 +3,10 @@ export default {
   montserratRegular: 'Montserrat_400Regular',
   montserratBold: 'Montserrat_600SemiBold',
   size: {
-    smallerTet: 10,
+    smallerText: 10,
     smallText: 12,
     text: 14,
     title: 22,
-    subtilte: 18,
+    subtitle: 18,
   },
 };
