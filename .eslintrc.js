@@ -35,6 +35,7 @@ module.exports = {
     'jest',
   ],
   rules: {
+    'no-use-before-define': 'off',
     'prettier/prettier': 'warn',
     'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
     'import/prefer-default-export': 'off',

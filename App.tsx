@@ -21,7 +21,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     Montserrat_400Regular,
     Montserrat_600SemiBold,
-    Montserrat_300Light
+    Montserrat_300Light,
   });
 
   if (!isLoadingComplete || !fontsLoaded) {
