@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mercado-academy",
+    "name": "Mercado Academy",
     "slug": "mercado-academy",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,10 +19,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.megahack.mercadoacademy",
+      "buildNumber": "1.0.0"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
+    },
+    "android": {
+      "package": "com.megahack.mercadoacademy",
+      "versionCode": 1
     }
   }
 }
