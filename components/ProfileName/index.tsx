@@ -8,7 +8,7 @@ import Fonts from '../../constants/Fonts';
 const ProfileName: React.FC = () => {
   return (
     <Container>
-      <Avatar.Icon accessibilityStates icon="user" />
+      <Avatar.Icon accessibilityStates icon="account" />
       <StyledText style={{ color: '#fff', marginLeft: 5, fontFamily: Fonts.montserratBold } }>
         Olá Gustavo!
       </StyledText>
