@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { SimpleLineIcons } from '@expo/vector-icons';
+import { StyleSheet } from 'react-native';
 import {
   Container,
   IconContainer,
@@ -12,14 +13,13 @@ import {
 interface RewardCard {
   title: string;
   subTitle: string;
+  icon: JSX.Element;
 }
 
-const RewardCard: React.FC<RewardCard> = ({ title, subTitle }) => {
+const RewardCard: React.FC<RewardCard> = ({ title, subTitle, icon }) => {
   return (
-    <Container>
-      <IconContainer>
-        <MaterialCommunityIcons name="home" />
-      </IconContainer>
+    <Container style={styles.shadow}>
+      <IconContainer>{icon}</IconContainer>
       <TextContainer>
         <Title>{title}</Title>
         <Subtitle>{subTitle}</Subtitle>
@@ -27,5 +27,19 @@ const RewardCard: React.FC<RewardCard> = ({ title, subTitle }) => {
     </Container>
   );
 };
+
+const styles = StyleSheet.create({
+  shadow: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+  },
+});
 
 export default RewardCard;
