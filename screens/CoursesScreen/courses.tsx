@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { Video } from 'expo-av';
 
 import { useNavigation } from '@react-navigation/native';
-import { AntDesign, AntDesign } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { Image } from 'react-native-elements';
 import CourseList from '../../components/Course/CourseList/courseCardList';
 import {
   Container,
@@ -14,8 +14,6 @@ import {
   Button,
   TextButton,
 } from './courses-styles';
-
-import Colors from '../../constants/Colors';
 
 interface CoursesProps {
   route: any;
@@ -39,7 +37,12 @@ const Courses: React.FC<CoursesProps> = ({ route }) => {
         useNativeControls
         shouldPlay
         style={{ flex: 1 }}
+        usePoster
       />
+      {/* <Image
+        source={require('../../assets/images/courses1.png')}
+        style={{ height: 300 }}
+      /> */}
       <Container>
         <Small>Trilha #01</Small>
         <Title>{title}</Title>
