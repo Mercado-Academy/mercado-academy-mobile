@@ -64,6 +64,7 @@ export const RatingValue = styled.Text`
 
 export const Progress = styled.View`
   align-items: flex-end;
+  flex: 1;
 `;
 
 export const Classes = styled.Text`

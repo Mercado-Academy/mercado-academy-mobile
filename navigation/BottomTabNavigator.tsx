@@ -5,13 +5,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 
 import Colors from '../constants/Colors';
-import { BottomTabParamList, HomeParamList } from '../types';
+import { BottomTabParamList, HomeParamList, CoursesParamList } from '../types';
 import HomeScreen from '../screens/HomeScreen';
 import TabBar from '../components/TabBar';
 import TrailsScreen from '../screens/TrailsScreen/trails';
 import Courses from '../screens/CoursesScreen/courses';
-import TrackComplete from '../screens/TrackComplete';
 import Profile from '../screens/Profile';
+import TrackComplete from '../screens/TrackComplete';
 
 interface TabBarIconProps {
   size: number;
@@ -35,6 +35,21 @@ function HomeTabNavigator() {
         options={{ headerTitle: 'Tab One Title', headerShown: false }}
       />
     </HomeStack.Navigator>
+  );
+}
+
+const CoursesStack = createStackNavigator<CoursesParamList>();
+
+function CoursesStackNavigator() {
+  return (
+    <CoursesStack.Navigator
+      initialRouteName="Trails"
+      screenOptions={{ headerShown: false }}
+    >
+      <CoursesStack.Screen name="Trails" component={TrailsScreen} />
+      <CoursesStack.Screen name="Courses" component={Courses} />
+      <CoursesStack.Screen name="TrackComplete" component={TrackComplete} />
+    </CoursesStack.Navigator>
   );
 }
 
@@ -62,7 +77,7 @@ const BottomTabNavigator: React.FC = () => {
       />
       <BottomTab.Screen
         name="Cursos"
-        component={TrailsScreen}
+        component={CoursesStackNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
             <TabBarIconProps

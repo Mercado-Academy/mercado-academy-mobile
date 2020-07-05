@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
 import {
   Container,
   Title,
@@ -13,6 +14,8 @@ import {
 } from './styles';
 
 const CongratsCard: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <Title>Parabéns! Trilha 02 completa!</Title>
@@ -26,7 +29,7 @@ const CongratsCard: React.FC = () => {
         <AwardTitle>Recompensa 02:</AwardTitle>
         <AwardText>3x frete grátis</AwardText>
       </Award>
-      <Button>
+      <Button onPress={() => navigation.navigate('Perfil')}>
         <ButtonText>Receber</ButtonText>
       </Button>
     </Container>

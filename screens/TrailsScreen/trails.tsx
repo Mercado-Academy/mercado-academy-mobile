@@ -1,29 +1,34 @@
 import React from 'react';
-import { View, ScrollView, StyleSheet, Text, FlatList, Button } from 'react-native';
-import ProfileName from '../../components/ProfileName';
+import { ScrollView, FlatList } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 import UpperTextBox from '../../components/UpperTextBox';
 import Trail from '../../components/TrailCard';
-import { Absolute, ContinueButton, Container, HeaderText } from './styles';
-import * as data from '../../db.mocked.json'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Absolute, ContinueButton, HeaderText } from './styles';
+import * as data from '../../db.mocked.json';
 
 const TrailsScreen: React.FC = () => {
   const mensagem = `Nessa trilha você conhecerá os o básico de cada produto dentro do Mercado Livre. É uma visão geral de todo nosso potencial.`;
+
+  const navigation = useNavigation();
+
   return (
     <ScrollView>
       <UpperTextBox>
-        <HeaderText>Continue aprendendo seguindo as trilhas que você ainda não completou.</HeaderText>    
-        <ContinueButton 
+        <HeaderText>
+          Continue aprendendo seguindo as trilhas que você ainda não completou.
+        </HeaderText>
+        <ContinueButton
           title="Continuar de onde parei"
-          onPress={() => console.log('')}>
-        </ContinueButton>    
+          onPress={() => console.log('')}
+        />
       </UpperTextBox>
       <Absolute>
         <FlatList
           data={data.trail.courses}
-          renderItem={({item}) => {
+          renderItem={({ item }) => {
             return (
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('Courses')}>
                 <Trail
                   title={item.title}
                   indicator={Number(item.id)}
@@ -32,7 +37,7 @@ const TrailsScreen: React.FC = () => {
                   bodyText={item.description}
                 />
               </TouchableOpacity>
-            )
+            );
           }}
           keyExtractor={(course) => course.id}
         />

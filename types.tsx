@@ -17,3 +17,9 @@ export type HomeParamList = {
 export type TabTwoParamList = {
   TabTwoScreen: undefined;
 };
+
+export type CoursesParamList = {
+  Trails: undefined;
+  Courses: undefined;
+  TrackComplete: undefined;
+};

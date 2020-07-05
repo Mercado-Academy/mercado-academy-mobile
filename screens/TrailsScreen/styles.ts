@@ -6,10 +6,10 @@ export const ContinueButton = styled.Button`
 `;
 
 export const HeaderText = styled.Text`
-  color: #FFF;
+  color: #fff;
   padding: 10px 15px 35px;
 
-  font-family: ${Fonts.montserratRegular}
+  font-family: ${Fonts.montserratRegular};
 `;
 
 export const Absolute = styled.View`
@@ -20,5 +20,5 @@ export const Absolute = styled.View`
 
 export const Container = styled.View`
   position: relative;
-  background-color: #000
+  background-color: #000;
 `;

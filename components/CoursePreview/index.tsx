@@ -1,7 +1,6 @@
 import React from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Rating as RNRating } from 'react-native-elements';
-
 import { ProgressBar } from 'react-native-paper';
 import {
   Container,
