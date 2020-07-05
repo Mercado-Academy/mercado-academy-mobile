@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 import { Video } from 'expo-av';
 
 import { useNavigation } from '@react-navigation/native';
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign, AntDesign } from '@expo/vector-icons';
 import CourseList from '../../components/Course/CourseList/courseCardList';
 import {
   Container,
@@ -17,11 +17,17 @@ import {
 
 import Colors from '../../constants/Colors';
 
-const Courses: React.FC = () => {
+interface CoursesProps {
+  route: any;
+}
+
+const Courses: React.FC<CoursesProps> = ({ route }) => {
   const navigation = useNavigation();
 
+  const { title, duration, description, videos } = route.params;
+
   return (
-    <Container>
+    <>
       <Video
         source={{
           uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
@@ -32,29 +38,23 @@ const Courses: React.FC = () => {
         resizeMode="cover"
         useNativeControls
         shouldPlay
-        style={{ width: 370, height: 300, marginBottom: 15 }}
+        style={{ flex: 1 }}
       />
-      <Small>Trilha #01</Small>
-      <Title>Como anunciar um produto?</Title>
-      <Small>Duração:</Small>
-      <Button onPress={() => navigation.navigate('TrackComplete')}>
-        <AntDesign name="play" size={15} color="#FFF" />
-        <TextButton> Iniciar curso</TextButton>
-      </Button>
-      <MinorTitle>Resumo do curso</MinorTitle>
-      <Content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        nisi massa, fringilla nec libero eget, eleifend faucibus arcu. Donec non
-        posuere libero. Vivamus ut pulvinar tellus, eget dignissim quam. Aenean
-        suscipit porta risus, sit amet tempus massa malesuada eget. In
-        ullamcorper rhoncus leo nec aliquet. Pellentesque ac turpis et nisl
-        faucibus ultricies. Mauris massa purus, tincidunt vel luctus vitae,
-        aliquet a justo. Integer non urna dolor.
-      </Content>
-      <MinorTitle>Cursos</MinorTitle>
+      <Container>
+        <Small>Trilha #01</Small>
+        <Title>{title}</Title>
+        <Small>Duração: {duration}</Small>
+        <Button onPress={() => navigation.navigate('TrackComplete')}>
+          <AntDesign name="play" size={15} color="#FFF" />
+          <TextButton>Iniciar curso</TextButton>
+        </Button>
+        <MinorTitle>Resumo do curso</MinorTitle>
+        <Content>{description}</Content>
+        <MinorTitle>Cursos</MinorTitle>
 
-      <CourseList />
-    </Container>
+        <CourseList videos={videos} />
+      </Container>
+    </>
   );
 };
 

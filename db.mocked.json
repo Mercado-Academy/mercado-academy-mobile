@@ -1,33 +1,70 @@
 {
-  "trail": {
-    "name": "Básico",
-    "courses": [
+"courses": [
+  {
+    "id": "1",
+    "title": "Conhecendo a plataforma",
+    "description": "Nessa trilha você conhecerá o básico de cada produto dentro do Mercado Livre. É uma visão geral de todo nosso potencial.",
+    "videos": [
       {
-        "id": "1",
-        "title": "Conhecendo a plataforma",
-        "videos": 4,
-        "description": "Nessa trilha você conhecerá os o básico de cada produto dentro do Mercado Livre. É uma visão geral de todo nosso potencial."
+        "title": "Criando sua conta",
+        "subtitle": "Primeiro passo",
+        "bodyText": "Esse é o passo inicial: ter sua conta com todos os seus dados para acessar a plataforma quando e onde quiser"
       },
       {
-        "id": "2",
-        "title": "Como anunciar um produto?",
-        "videos": 6,
-        "description": "Depois de conhecer o básico, vamos mostrar como é o processo de venda, quais os macetes e dicas especiais sobre o tema."
+        "title": "Conhecendo a interface da plataforma",
+        "subtitle": "Familiarizando-se",
+        "bodyText": "O ML possui uma interface bem intuitiva e, dentro desse vídeo, iremos destrinchar cada parte dela"
       },
       {
-        "id": "3",
-        "title": "Estratégias de marketing",
-        "videos": 5,
-        "description": "Já sabendo vender agora a pergunta é: como apresentar os melhores produtos para os melhores compradores? Atinja seu público-alvo dentro dessas aulas!"
-      },
-      {
-        "id": "4",
-        "title": "Analisando relatórios",
-        "videos": 10,
-        "description": "Legal! Após vender seus primeiros produtos, como medir seus ganhos e gastos? Aprenda a analisar suas finanças dentro do nosso site."
+        "title": "Efetuando a primeira venda",
+        "subtitle": "Finalmente!",
+        "bodyText": "Depois de criar a conta e conhecer as partes básicas da interface, agora basta colocar seus produtos à venda. Ensinaremos passo a passo como efetuar uma venda"
       }
     ]
   },
+  {
+    "id": "2",
+    "title": "Como anunciar um produto efetivamente?",
+    "description": "Depois de conhecer o básico, vamos mostrar como é o processo de venda, quais os macetes e dicas especiais sobre o tema.",
+    "videos": [
+      {
+        "title": "Como criar um anúncio de venda relevante?",
+        "subtitle": "Estratégias",
+        "bodyText": "Após efetuar seu primeiro anúncio e/ou venda vem a pergunta: Como tornar esse processo ainda mais interessante ao consumidor?"
+      },
+      {
+        "title": "Elementos essenciais para ser bem ranqueado nos anúncios",
+        "subtitle": "Ranking",
+        "bodyText": "Sabendo sobre o sistema de ranqueamento do ML, como identificar pontos de falha em seus anúncios a fim de alcançar o topo? Veja esse vídeo e torne-se um dos melhores."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Estratégias de marketing",
+    "description": "Já sabendo vender agora a pergunta é: como apresentar os melhores produtos para os melhores compradores? Atinja seu público-alvo dentro dessas aulas!",
+    "videos": [
+      {
+        "title": "",
+        "subtitle": "",
+        "bodyText": ""
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Analisando relatórios",
+    "description": "Legal! Após vender seus primeiros produtos, como medir seus ganhos e gastos? Aprenda a analisar suas finanças dentro do nosso site.",
+    "videos": [
+      {
+        "title": "",
+        "subtitle": "",
+        "bodyText": ""
+      }
+    ]
+  }
+]
+,
   "homePage":{
     "homePageHighlights": [
       {
@@ -128,3 +165,4 @@
     ]
   }
 }
+
