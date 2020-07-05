@@ -1,7 +1,8 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-
 import { SimpleLineIcons } from '@expo/vector-icons';
+import mock from '../../db.mocked.json';
+
 import { Container, Subtitle } from './styles';
 import ProfileHeader from '../../components/ProfileHeader';
 import RewardCard from '../../components/RewardCard';
@@ -24,9 +25,9 @@ const Profile: React.FC = () => {
           }
         />
         <Subtitle>Suas recompensas</Subtitle>
-        <BenefitsList />
+        <BenefitsList rewards={mock.profile.currentRewards} />
         <Subtitle>Próximas recompensas</Subtitle>
-        <BenefitsList />
+        <BenefitsList rewards={mock.profile.nextRewards} />
       </ScrollView>
     </Container>
   );

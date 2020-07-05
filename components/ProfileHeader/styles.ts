@@ -36,6 +36,7 @@ export const StatDiscription = styled.Text`
   font-family: ${Fonts.montserratBold};
   font-size: ${Fonts.size.subtitle}px;
   color: #fff;
+  text-align: center;
 `;
 
 export const Stat = styled.View`

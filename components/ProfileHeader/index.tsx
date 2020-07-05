@@ -26,16 +26,16 @@ const ProfileHeader: React.FC = () => {
       </AvatarContainer>
       <StatsContainer>
         <Stat>
-          <StatValue>175+</StatValue>
-          <StatDiscription>Horas</StatDiscription>
+          <StatValue>10+</StatValue>
+          <StatDiscription>Horas assistidas</StatDiscription>
         </Stat>
         <Stat>
-          <StatValue>175+</StatValue>
-          <StatDiscription>Horas</StatDiscription>
+          <StatValue>2</StatValue>
+          <StatDiscription>Trilhas concluidas</StatDiscription>
         </Stat>
         <Stat>
-          <StatValue>175+</StatValue>
-          <StatDiscription>Horas</StatDiscription>
+          <StatValue>17</StatValue>
+          <StatDiscription>Vídeos assistidos</StatDiscription>
         </Stat>
       </StatsContainer>
     </Container>

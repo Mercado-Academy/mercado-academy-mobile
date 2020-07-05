@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {
   Container,
@@ -11,13 +10,26 @@ import {
 import BenefitsItem from '../BenefitsItem';
 import Colors from '../../../constants/Colors';
 
-const BenefitsList: React.FC = () => {
+interface BenefitsList {
+  rewards: {
+    id: string;
+    description: string;
+    iconName: string;
+  }[];
+}
+const BenefitsList: React.FC<BenefitsList> = ({ rewards = [] }) => {
   return (
     <Container style={styles.shadow}>
-      <BenefitsItem />
-      <Separator />
-      <BenefitsItem />
-      <Separator />
+      {rewards.map((e) => (
+        <>
+          <BenefitsItem
+            key={e.id}
+            title={e.description}
+            iconName={e.iconName}
+          />
+          <Separator />
+        </>
+      ))}
       <BottomContainer>
         <BottomContainerText>Ver todas</BottomContainerText>
         <MaterialCommunityIcons

@@ -100,5 +100,31 @@
 
       }
     ]
+  },
+  "profile":{
+    "currentRewards":[
+      {
+        "id": "1",
+        "description": "3x frete grátis para suas próximas vendas",
+        "iconName": "local-shipping"
+      },
+      {
+        "id": "2",
+        "description": "2 anúncios clássicos grátis",
+        "iconName": "trending-up"
+      }
+    ],
+    "nextRewards":[
+      {
+        "id": "1",
+        "description": "1 anúncio premium grátis",
+        "iconName": "trending-up"
+      },
+      {
+        "id": "2",
+        "description": "1 mês de suporte prioritário",
+        "iconName":"help-outline"
+      }
+    ]
   }
 }
