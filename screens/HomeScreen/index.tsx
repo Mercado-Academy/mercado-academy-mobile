@@ -2,6 +2,8 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 import UpperTextBox from '../../components/UpperTextBox';
 import SearchBar from '../../components/HomeSearchBar';
 import mock from '../../db.mocked.json';
@@ -11,6 +13,8 @@ import PlatformCard from '../../components/PlatformCard';
 import CoursePreview from '../../components/CoursePreview';
 
 const HomeScreen: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <UpperTextBox>
@@ -26,13 +30,17 @@ const HomeScreen: React.FC = () => {
           contentContainerStyle={styles.scrollViewContainer}
         >
           {mock.homePage.homePageHighlights.map((element) => (
-            <View key={element.id} style={styles.item}>
+            <TouchableOpacity
+              key={element.id}
+              style={styles.item}
+              onPress={() => navigation.navigate('Cursos')}
+            >
               <CourseImagePreview
                 name={element.title}
                 provider={element.provider}
                 source={element.image}
               />
-            </View>
+            </TouchableOpacity>
           ))}
         </ScrollView>
 
@@ -44,13 +52,23 @@ const HomeScreen: React.FC = () => {
           contentContainerStyle={styles.scrollViewContainer}
         >
           <View style={styles.item}>
-            <PlatformCard />
+            <PlatformCard
+              color="#f4717f"
+              source={require('../../assets/images/mercadoshops1.png')}
+              height="50%"
+            />
           </View>
           <View style={styles.item}>
-            <PlatformCard />
+            <PlatformCard
+              color="#8DCDE9"
+              source={require('../../assets/images/mercadopago1.png')}
+            />
           </View>
           <View style={styles.item}>
-            <PlatformCard />
+            <PlatformCard
+              color="#FFF373"
+              source={require('../../assets/images/mercadolivre1.png')}
+            />
           </View>
         </ScrollView>
 

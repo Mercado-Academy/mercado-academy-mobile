@@ -1,9 +1,13 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+interface Container {
+  color: string;
+}
+
+export const Container = styled.View<Container>`
   border-radius: 20px;
   height: 90px;
-  background-color: #f4717f;
+  background-color: ${({ color }) => color};
   padding: 10px;
   width: 185px;
   border-radius: 25px;

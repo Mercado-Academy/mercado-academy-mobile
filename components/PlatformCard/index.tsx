@@ -4,18 +4,19 @@ import { Image } from 'react-native';
 import { Container } from './styles';
 
 interface PlatformCard {
-  image: string;
+  source: any;
   color: string;
+  height?: string;
 }
-const PlatformCard: React.FC = () => {
+const PlatformCard: React.FC<PlatformCard> = ({ source, color, height }) => {
   return (
-    <Container>
+    <Container color={color}>
       <Image
-        source={{
-          uri:
-            'https://http2.mlstatic.com/frontend-assets/ui-navigation/5.6.1/mercadopago/logo__small.png',
-          height: 100,
+        source={source}
+        style={{
+          height: height || '100%',
         }}
+        resizeMode="contain"
       />
     </Container>
   );
