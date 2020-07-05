@@ -1,10 +1,13 @@
 import React from 'react';
+import { Text } from 'react-native'
 import { Video } from 'expo-av';
 
-import { Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import CourseList from '../../components/Course/CourseList/courseCardList';
-import { Container, MinorTitle, Small, Title, Content } from './courses-styles';
+import { Container, MinorTitle, Small, Title, Content, Button, TextButton } from './courses-styles';
+
+import { AntDesign } from '@expo/vector-icons';
+import Colors from '../../constants/Colors';
 
 const Courses: React.FC = () => {
   const navigation = useNavigation();
@@ -21,15 +24,23 @@ const Courses: React.FC = () => {
         resizeMode="cover"
         useNativeControls
         shouldPlay
-        style={{ width: 370, height: 300 }}
+        style={{ width: 370, height: 300, marginBottom: 15 }}
       />
       <Small>Trilha #01</Small>
       <Title>Como anunciar um produto?</Title>
       <Small>Duração:</Small>
       <Button
-        title="Iniciar trilha"
         onPress={() => navigation.navigate('TrackComplete')}
-      />
+      >
+        <TextButton>
+        <AntDesign
+          name="play"
+          size={15}
+          color="#FFF"
+        />
+          Iniciar curso
+        </TextButton>
+      </Button>
       <MinorTitle>Resumo do curso</MinorTitle>
       <Content>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse

@@ -1,11 +1,13 @@
 import React from 'react';
-import { ScrollView, FlatList } from 'react-native';
+import { ScrollView, FlatList, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import UpperTextBox from '../../components/UpperTextBox';
 import Trail from '../../components/TrailCard';
-import { Absolute, ContinueButton, HeaderText } from './styles';
+import { Absolute, ContinueButton, HeaderText, ContinueButtonText } from './styles';
 import * as data from '../../db.mocked.json';
+import { AntDesign } from '@expo/vector-icons';
+import Colors from '../../constants/Colors';
 
 const TrailsScreen: React.FC = () => {
   const mensagem = `Nessa trilha você conhecerá os o básico de cada produto dentro do Mercado Livre. É uma visão geral de todo nosso potencial.`;
@@ -15,13 +17,20 @@ const TrailsScreen: React.FC = () => {
   return (
     <ScrollView>
       <UpperTextBox>
-        <HeaderText>
-          Continue aprendendo seguindo as trilhas que você ainda não completou.
-        </HeaderText>
+        <HeaderText>Continue aprendendo seguindo as trilhas que você ainda 
+          não completou.</HeaderText>
         <ContinueButton
-          title="Continuar de onde parei"
           onPress={() => console.log('')}
-        />
+        > 
+          <ContinueButtonText>
+            <AntDesign
+              name="play"
+              size={15}
+              color={Colors.light.tint}
+            />
+            <Text>Continuar de onde parei</Text>
+          </ContinueButtonText>
+        </ContinueButton>
       </UpperTextBox>
       <Absolute>
         <FlatList

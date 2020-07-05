@@ -1,5 +1,21 @@
 import styled from 'styled-components/native';
 import Fonts from '../../constants/Fonts';
+import { RectButton } from 'react-native-gesture-handler';
+import Colors from '../../constants/Colors';
+
+export const Button = styled(RectButton)`
+  padding: 12px;
+  background-color: ${Colors.light.tint};
+  border-radius: 10px;
+  margin-top: 20px;
+  max-width: 35%;
+  justify-content: center;
+`;
+
+export const TextButton = styled.Text`
+  color: #FFF;
+  font-family: ${Fonts.montserratBold}
+`;
 
 export const Container = styled.ScrollView`
   padding: 20px;

@@ -1,14 +1,28 @@
 import styled from 'styled-components/native';
 import Fonts from '../../constants/Fonts';
+import { RectButton } from 'react-native-gesture-handler';
+import Colors from '../../constants/Colors';
 
-export const ContinueButton = styled.Button`
-  border-radius: 15px;
+export const ContinueButton = styled(RectButton)`
+  padding: 12px;
+  background-color: #FFF;
+  border-radius: 10px;
+  margin-top: 6px;
+  max-width: 55%;
+  margin-left: 12px;
+  justify-content: center;
+  margin-bottom: 16px;
 `;
+
+export const ContinueButtonText = styled.Text`
+  color: ${Colors.light.tint};
+  font-family: ${Fonts.montserratBold};
+`;
+
 
 export const HeaderText = styled.Text`
   color: #fff;
-  padding: 10px 15px 35px;
-
+  padding: 10px 15px 15px;
   font-family: ${Fonts.montserratRegular};
 `;
 
