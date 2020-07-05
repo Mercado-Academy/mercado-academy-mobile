@@ -7,28 +7,36 @@ import CourseList from '../../components/Course/CourseList/courseCardList';
 import { Container, MinorTitle, Small, Title, Content, Button, TextButton } from './courses-styles';
 
 import { AntDesign } from '@expo/vector-icons';
-import Colors from '../../constants/Colors';
 
-const Courses: React.FC = () => {
+
+interface CoursesProps {
+  route: any;
+}
+
+
+const Courses: React.FC<CoursesProps> = ({route}) => {
   const navigation = useNavigation();
 
+  const { title, duration, description, videos } = route.params;
+
   return (
+    <>
+    <Video
+      source={{
+        uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+      }}
+      rate={1.0}
+      volume={1.0}
+      isMuted
+      resizeMode="cover"
+      useNativeControls
+      shouldPlay
+      style={{ flex: 1 }}
+    />
     <Container>
-      <Video
-        source={{
-          uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
-        }}
-        rate={1.0}
-        volume={1.0}
-        isMuted
-        resizeMode="cover"
-        useNativeControls
-        shouldPlay
-        style={{ width: 370, height: 300, marginBottom: 15 }}
-      />
       <Small>Trilha #01</Small>
-      <Title>Como anunciar um produto?</Title>
-      <Small>Duração:</Small>
+      <Title>{title}</Title>
+      <Small>Duração: {duration}</Small>
       <Button
         onPress={() => navigation.navigate('TrackComplete')}
       >
@@ -43,18 +51,15 @@ const Courses: React.FC = () => {
       </Button>
       <MinorTitle>Resumo do curso</MinorTitle>
       <Content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        nisi massa, fringilla nec libero eget, eleifend faucibus arcu. Donec non
-        posuere libero. Vivamus ut pulvinar tellus, eget dignissim quam. Aenean
-        suscipit porta risus, sit amet tempus massa malesuada eget. In
-        ullamcorper rhoncus leo nec aliquet. Pellentesque ac turpis et nisl
-        faucibus ultricies. Mauris massa purus, tincidunt vel luctus vitae,
-        aliquet a justo. Integer non urna dolor.
+        {description}
       </Content>
       <MinorTitle>Cursos</MinorTitle>
 
-      <CourseList />
+      <CourseList 
+        videos={videos}
+      />
     </Container>
+    </>
   );
 };
 

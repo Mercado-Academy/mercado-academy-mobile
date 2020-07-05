@@ -34,14 +34,16 @@ const TrailsScreen: React.FC = () => {
       </UpperTextBox>
       <Absolute>
         <FlatList
-          data={data.trail.courses}
+          data={data.courses}
           renderItem={({ item }) => {
             return (
-              <TouchableOpacity onPress={() => navigation.navigate('Courses')}>
+              <TouchableOpacity 
+                onPress={() => navigation.navigate('Courses', data.courses.find(x => x.id === item.id))}  
+              >
                 <Trail
                   title={item.title}
                   indicator={Number(item.id)}
-                  videos={item.videos}
+                  videos={item.videos.length}
                   position={Number(item.id) % 2 === 0 ? 'left' : 'right'}
                   bodyText={item.description}
                 />
