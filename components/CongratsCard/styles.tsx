@@ -49,7 +49,6 @@ export const Button = styled(RectButton)`
   margin-top: 20px;
   max-width: 100%;
   justify-content: center;
-  /* width: 100px; */
 `;
 
 export const ButtonText = styled.Text`

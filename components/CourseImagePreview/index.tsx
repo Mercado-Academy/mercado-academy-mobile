@@ -8,17 +8,27 @@ import {
   Opacity,
 } from './styles';
 
-const CourseImagePreview: React.FC = () => {
+interface CourseImagePreview {
+  name: string;
+  provider: string;
+  source: string;
+}
+
+const CourseImagePreview: React.FC<CourseImagePreview> = ({
+  name,
+  provider,
+  source,
+}) => {
   return (
     <Container>
       <Background
-        source={require('../../assets/images/courses1.png')}
+        source={{ uri: source }}
         // resizeMode="cover"
       >
         <Opacity>
           <NameContainer>
-            <CourseName>Higienização de produtos</CourseName>
-            <CourseProvider>Por Mercado Envios</CourseProvider>
+            <CourseName>{name}</CourseName>
+            <CourseProvider>{provider}</CourseProvider>
           </NameContainer>
         </Opacity>
       </Background>

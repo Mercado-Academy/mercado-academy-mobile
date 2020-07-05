@@ -27,5 +27,70 @@
         "description": "Legal! Após vender seus primeiros produtos, como medir seus ganhos e gastos? Aprenda a analisar suas finanças dentro do nosso site."
       }
     ]
+  },
+  "homePage":{
+    "homePageHighlights": [
+      {
+        "id": "1",
+        "image": "https://images.unsplash.com/photo-1577705998148-6da4f3963bc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+        "title": "Higienização de produtos",
+        "provider": "Mercado Envios"
+      },
+      {
+        "id": "2",
+        "image": "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+        "title": "Cativando seu cliente",
+        "provider": "Mercado Livre"
+      },
+      {
+        "id": "3",
+        "image": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+        "title": "Cuidando de suas finanças",
+        "provider": "Mercado Pago"
+      },
+      {
+        "id": "4",
+        "image": "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80",
+        "title": "Marketing digital",
+        "provider": "Mercado Publicidade"
+      }
+    ],
+    "platforms": [
+      {
+        "id": "1",
+        "image": "./assets/images/courses1.png"
+      },
+      {
+        "id": "2",
+        "image": "./assets/images/courses1.png"
+      },
+      {
+        "id": "3",
+        "image": "./assets/images/courses1.png"
+      }
+    ],
+    "popularVideos": [
+      {
+        "id": "1",
+        "title": "Como publicar seu produto corretamente",
+        "duration": "1h 15m",
+        "rating": 4.5,
+        "icon": "package"
+      },
+      {
+        "id": "2",
+        "title": "Como funciona as avaliações dos clientes",
+        "duration": "45m",
+        "rating": 3.8,
+        "icon":  "face"
+      },
+      {
+        "id": "3",
+        "title": "Ficando em bem colocado nas pesquisas",
+        "duration": "30m",
+        "rating": 4.7,
+        "icon": "format-list-numbered"
+      }
+    ]
   }
 }

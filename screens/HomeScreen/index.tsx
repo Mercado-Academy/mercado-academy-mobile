@@ -4,7 +4,7 @@ import { View, ScrollView, StyleSheet } from 'react-native';
 
 import UpperTextBox from '../../components/UpperTextBox';
 import SearchBar from '../../components/HomeSearchBar';
-
+import mock from '../../db.mocked.json';
 import CourseImagePreview from '../../components/CourseImagePreview';
 import { Container, SearchContainer, TitleText, SectionTitle } from './styles';
 import PlatformCard from '../../components/PlatformCard';
@@ -25,15 +25,15 @@ const HomeScreen: React.FC = () => {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.scrollViewContainer}
         >
-          <View style={styles.item}>
-            <CourseImagePreview />
-          </View>
-          <View style={styles.item}>
-            <CourseImagePreview />
-          </View>
-          <View style={styles.item}>
-            <CourseImagePreview />
-          </View>
+          {mock.homePage.homePageHighlights.map((element) => (
+            <View key={element.id} style={styles.item}>
+              <CourseImagePreview
+                name={element.title}
+                provider={element.provider}
+                source={element.image}
+              />
+            </View>
+          ))}
         </ScrollView>
 
         <SectionTitle>Navegue por plataforma</SectionTitle>
