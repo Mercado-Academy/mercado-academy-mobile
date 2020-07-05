@@ -58,15 +58,18 @@
     "platforms": [
       {
         "id": "1",
-        "image": "./assets/images/courses1.png"
+        "image": "./assets/images/courses1.png",
+        "color": "#F4717F"
       },
       {
         "id": "2",
-        "image": "./assets/images/courses1.png"
+        "image": "./assets/images/courses1.png",
+        "color":"#8DCDE9"
       },
       {
         "id": "3",
-        "image": "./assets/images/courses1.png"
+        "image": "./assets/images/courses1.png",
+        "color": "#C7E869"
       }
     ],
     "popularVideos": [
@@ -75,21 +78,26 @@
         "title": "Como publicar seu produto corretamente",
         "duration": "1h 15m",
         "rating": 4.5,
-        "icon": "package"
+        "icon": "package",
+        "classes": 8
       },
       {
         "id": "2",
         "title": "Como funciona as avaliações dos clientes",
         "duration": "45m",
         "rating": 3.8,
-        "icon":  "face"
+        "icon":  "face",
+        "classes": 5
+
       },
       {
         "id": "3",
-        "title": "Ficando em bem colocado nas pesquisas",
+        "title": "Ficando bem colocado nas pesquisas",
         "duration": "30m",
         "rating": 4.7,
-        "icon": "format-list-numbered"
+        "icon": "format-list-numbered",
+        "classes": 7
+
       }
     ]
   }

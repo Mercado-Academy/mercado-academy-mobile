@@ -57,18 +57,16 @@ const HomeScreen: React.FC = () => {
         <SectionTitle>Cursos mais populares da semana</SectionTitle>
 
         <View style={{ flex: 1, padding: 10 }}>
-          <View style={styles.verticalItem}>
-            <CoursePreview />
-          </View>
-          <View style={styles.verticalItem}>
-            <CoursePreview />
-          </View>
-          <View style={styles.verticalItem}>
-            <CoursePreview />
-          </View>
-          <View style={styles.verticalItem}>
-            <CoursePreview />
-          </View>
+          {mock.homePage.popularVideos.map((e) => (
+            <View key={e.id} style={styles.verticalItem}>
+              <CoursePreview
+                classes={e.classes}
+                rating={e.rating}
+                title={e.title}
+                duration={e.duration}
+              />
+            </View>
+          ))}
         </View>
       </ScrollView>
     </Container>

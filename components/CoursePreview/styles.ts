@@ -7,6 +7,7 @@ export const Container = styled.View`
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
+  align-items: center;
 `;
 
 export const IconContainer = styled.View`
@@ -15,6 +16,8 @@ export const IconContainer = styled.View`
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  width: 60px;
+  height: 60px;
 `;
 
 export const DetailsContainer = styled.View`

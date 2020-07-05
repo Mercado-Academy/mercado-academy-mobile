@@ -18,7 +18,19 @@ import {
   DurationValue,
 } from './styles';
 
-const CoursePreview: React.FC = () => {
+interface CoursePreviewProps {
+  title: string;
+  duration: string;
+  rating: number;
+  classes: number;
+}
+
+const CoursePreview: React.FC<CoursePreviewProps> = ({
+  title,
+  duration,
+  rating,
+  classes,
+}) => {
   return (
     <Container>
       <IconContainer>
@@ -26,24 +38,24 @@ const CoursePreview: React.FC = () => {
       </IconContainer>
       <DetailsContainer>
         <TitleContainer>
-          <Title>Como fazer algo</Title>
+          <Title>{title}</Title>
           <Duration>
             <DurationText>Duração: </DurationText>
-            <DurationValue>40m</DurationValue>
+            <DurationValue>{duration}</DurationValue>
           </Duration>
         </TitleContainer>
         <BottomContainer>
           <Rating>
-            <RNRating imageSize={12} readonly startingValue={4.5} />
-            <RatingValue> (4.5)</RatingValue>
+            <RNRating imageSize={12} readonly startingValue={rating} />
+            <RatingValue> ({rating})</RatingValue>
           </Rating>
           <Progress>
-            <Classes>03 de 15 aulas</Classes>
-            <ProgressBar
+            <Classes>{classes} aulas</Classes>
+            {/* <ProgressBar
               accessibilityStates
               progress={0.5}
               style={{ borderRadius: 10 }}
-            />
+            /> */}
           </Progress>
         </BottomContainer>
       </DetailsContainer>

@@ -89,15 +89,6 @@ const BottomTabNavigator: React.FC = () => {
         }}
       />
       <BottomTab.Screen
-        name="Agenda"
-        component={Courses}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <TabBarIconProps name="calendar-today" color={color} size={size} />
-          ),
-        }}
-      />
-      <BottomTab.Screen
         name="Perfil"
         component={Profile}
         options={{

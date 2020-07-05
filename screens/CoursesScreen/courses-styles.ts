@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-import Fonts from '../../constants/Fonts';
 import { RectButton } from 'react-native-gesture-handler';
+import Fonts from '../../constants/Fonts';
 import Colors from '../../constants/Colors';
 
 export const Button = styled(RectButton)`
@@ -8,13 +8,16 @@ export const Button = styled(RectButton)`
   background-color: ${Colors.light.tint};
   border-radius: 10px;
   margin-top: 20px;
-  max-width: 35%;
+  max-width: 150px;
   justify-content: center;
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const TextButton = styled.Text`
-  color: #FFF;
-  font-family: ${Fonts.montserratBold}
+  color: #fff;
+  font-family: ${Fonts.montserratBold};
+  margin-left: 10px;
 `;
 
 export const Container = styled.ScrollView`
@@ -23,7 +26,7 @@ export const Container = styled.ScrollView`
 
 export const Title = styled.Text`
   font-size: 16px;
-  font-family: ${Fonts.montserratBold}
+  font-family: ${Fonts.montserratBold};
 `;
 
 export const Small = styled.Text`
@@ -35,7 +38,7 @@ export const Small = styled.Text`
 export const MinorTitle = styled.Text`
   padding-top: 16px;
   font-size: 14px;
-  font-family: ${Fonts.montserratBold}
+  font-family: ${Fonts.montserratBold};
 `;
 
 export const Content = styled.Text`
