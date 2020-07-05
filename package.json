@@ -22,6 +22,7 @@
     "@types/styled-components": "^5.1.0",
     "expo": "~38.0.8",
     "expo-asset": "~8.1.7",
+    "expo-av": "~8.2.1",
     "expo-constants": "~9.1.1",
     "expo-font": "~8.2.1",
     "expo-linking": "^1.0.1",

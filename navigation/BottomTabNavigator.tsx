@@ -8,6 +8,8 @@ import Colors from '../constants/Colors';
 import { BottomTabParamList, HomeParamList } from '../types';
 import HomeScreen from '../screens/HomeScreen';
 import TabBar from '../components/TabBar';
+import TrailsScreen from '../screens/TrailsScreen/trails';
+import Courses from '../screens/CoursesScreen/courses';
 import TrackComplete from '../screens/TrackComplete';
 import Profile from '../screens/Profile';
 
@@ -60,7 +62,7 @@ const BottomTabNavigator: React.FC = () => {
       />
       <BottomTab.Screen
         name="Cursos"
-        component={HomeTabNavigator}
+        component={TrailsScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <TabBarIconProps
@@ -73,7 +75,7 @@ const BottomTabNavigator: React.FC = () => {
       />
       <BottomTab.Screen
         name="Agenda"
-        component={TrackComplete}
+        component={Courses}
         options={{
           tabBarIcon: ({ color, size }) => (
             <TabBarIconProps name="calendar-today" color={color} size={size} />
