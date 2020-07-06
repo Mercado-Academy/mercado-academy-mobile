@@ -26,7 +26,7 @@ const Courses: React.FC<CoursesProps> = ({ route }) => {
 
   return (
     <>
-      <Video
+      {/* <Video
         source={{
           uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
         }}
@@ -38,11 +38,11 @@ const Courses: React.FC<CoursesProps> = ({ route }) => {
         shouldPlay
         style={{ flex: 1 }}
         usePoster
-      />
-      {/* <Image
+      /> */}
+      <Image
         source={require('../../assets/images/courses1.png')}
         style={{ height: 300 }}
-      /> */}
+      />
       <Container>
         <Small>Trilha #01</Small>
         <Title>{title}</Title>
